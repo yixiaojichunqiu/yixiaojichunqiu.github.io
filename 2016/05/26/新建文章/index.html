@@ -84,25 +84,25 @@
 
 
 
-<meta name="description" content="hexo基本操作cd /Users/yixiaojichunqiu/yixiaojichunqiu.ioopen .source文件夹 _posts文件夹 创建 文章.md
+<meta name="description" content="hexo基本操作cd /Users/yixiaojichunqiu/yixiaojichunqiu.iohexo new 文章.mdopen .source文件夹 _posts文件夹 看到 文章.md
 标题大小 用#号代码 用```链接用 链接 [文字]后加(链接)
 测试hexo shttp://localhost:4000/
-发布hexo clean &amp;amp;&amp;amp; hexo g &amp;amp;&amp;amp; hexo d">
+发布hexo clean &amp;amp;&amp;amp; hexo g &amp;amp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="新建文章">
 <meta property="og:url" content="http://yoursite.com/2016/05/26/新建文章/index.html">
 <meta property="og:site_name" content="yixiaojichunqiu 流水账">
-<meta property="og:description" content="hexo基本操作cd /Users/yixiaojichunqiu/yixiaojichunqiu.ioopen .source文件夹 _posts文件夹 创建 文章.md
+<meta property="og:description" content="hexo基本操作cd /Users/yixiaojichunqiu/yixiaojichunqiu.iohexo new 文章.mdopen .source文件夹 _posts文件夹 看到 文章.md
 标题大小 用#号代码 用```链接用 链接 [文字]后加(链接)
 测试hexo shttp://localhost:4000/
-发布hexo clean &amp;amp;&amp;amp; hexo g &amp;amp;&amp;amp; hexo d">
-<meta property="og:updated_time" content="2018-07-13T22:29:57.409Z">
+发布hexo clean &amp;amp;&amp;amp; hexo g &amp;amp">
+<meta property="og:updated_time" content="2018-07-13T23:30:59.101Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="新建文章">
-<meta name="twitter:description" content="hexo基本操作cd /Users/yixiaojichunqiu/yixiaojichunqiu.ioopen .source文件夹 _posts文件夹 创建 文章.md
+<meta name="twitter:description" content="hexo基本操作cd /Users/yixiaojichunqiu/yixiaojichunqiu.iohexo new 文章.mdopen .source文件夹 _posts文件夹 看到 文章.md
 标题大小 用#号代码 用```链接用 链接 [文字]后加(链接)
 测试hexo shttp://localhost:4000/
-发布hexo clean &amp;amp;&amp;amp; hexo g &amp;amp;&amp;amp; hexo d">
+发布hexo clean &amp;amp;&amp;amp; hexo g &amp;amp">
 
 
 
@@ -222,9 +222,32 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
   
 </nav>
 
@@ -324,7 +347,7 @@
       
 
       
-        <p>hexo基本操作<br>cd /Users/yixiaojichunqiu/yixiaojichunqiu.io<br>open .<br>source文件夹 _posts文件夹 创建 文章.md</p>
+        <p>hexo基本操作<br>cd /Users/yixiaojichunqiu/yixiaojichunqiu.io<br>hexo new 文章.md<br>open .<br>source文件夹 _posts文件夹 看到 文章.md</p>
 <h2 id="标题大小-用-号"><a href="#标题大小-用-号" class="headerlink" title="标题大小 用#号"></a>标题大小 用#号</h2><p><code>代码</code> 用```<br>链接用 <a href="http://yixiaojichunqiu.com" target="_blank" rel="external">链接</a> [文字]后加(链接)</p>
 <p>测试<br>hexo s<br><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
 <p>发布<br>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
@@ -363,6 +386,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/24/指令/" rel="prev" title="指令">
+                指令 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -432,7 +459,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -440,6 +467,13 @@
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -609,6 +643,130 @@
 
   
   
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
 
   
 
