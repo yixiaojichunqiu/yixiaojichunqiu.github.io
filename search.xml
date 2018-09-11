@@ -43,7 +43,22 @@
   <entry>
     <title><![CDATA[指令]]></title>
     <url>%2F2017%2F10%2F24%2F%E6%8C%87%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[cd ~/cd /cd .. cp - i exam1.c /usr/wang/shiyan1.c 该命令将文件exam1.c拷贝到/usr/wang 这个目录下，并改名为 shiyan1.c。若不希望重新命名，可以使用下面的命令： cp exam1.c /usr/ wang/ cp - r /usr/xu/ /usr/liu/ 将/usr/xu目录中的所有文件及其子目录拷贝到目录/usr/liu中。 例1：将/usr/xu中的所有文件移到当前目录（用“.”表示）中： $ mv /usr/xu/ . 例2：将文件wch.txt重命名为wjz.doc $ mv wch.txt wjz.doc rm命令 - r 指示rm将参数中列出的全部目录和子目录均递归地删除。 - i 进行交互式删除 tar -zxvf Python-3.5.3.tar.xz mkdir mytemp vi a.txt find / -name ‘nginx-1.7.3.tar.gz’ cat /etc/issue cut -d : -f 1 /etc/passwd cat /etc/passwd 可以查看所有用户的列表 passwd 用户名 输入新密码，再确认一遍 lsof -i :8081 kill -9 30121 find / -size +100M rm -rf /var/log/ df -lh man]]></content>
+    <content type="text"><![CDATA[cd ~/cd /cd .. cp - i exam1.c /usr/wang/shiyan1.c 该命令将文件exam1.c拷贝到/usr/wang 这个目录下，并改名为 shiyan1.c。若不希望重新命名，可以使用下面的命令： cp exam1.c /usr/ wang/ cp - r /usr/xu/ /usr/liu/ 将/usr/xu目录中的所有文件及其子目录拷贝到目录/usr/liu中。 例1：将/usr/xu中的所有文件移到当前目录（用“.”表示）中： $ mv /usr/xu/ . 例2：将文件wch.txt重命名为wjz.doc $ mv wch.txt wjz.doc rm命令 - r 指示rm将参数中列出的全部目录和子目录均递归地删除。 - i 进行交互式删除 tar -zxvf Python-3.5.3.tar.xz mkdir mytemp vi a.txt find / -name ‘nginx-1.7.3.tar.gz’ cat /etc/issue cut -d : -f 1 /etc/passwd cat /etc/passwd 可以查看所有用户的列表 passwd 用户名 输入新密码，再确认一遍 lsof -i :8081 kill -9 30121 find / -size +100M rm -rf /var/log/ df -lh man cat /proc/version （Linux查看当前操作系统版本信息） cat /etc/issue 或cat /etc/redhat-release（Linux查看版本当前操作系统发行版信息） cat /proc/cpuinfo （Linux查看cpu相关信息，包括型号、主频、内核信息等） whereis ssserver]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[ssh]]></title>
+    <url>%2F2017%2F02%2F09%2Fssh%2F</url>
+    <content type="text"><![CDATA[ls -al ~/.sshssh-keygen -t rsa -C “yixiaojichunqiu@gmail.com” 多对https://www.jianshu.com/p/65303f8e5f10 ssh-add /Users/yixiaojichunqiu/.ssh/id_rsassh-add ~/.ssh/id_rsa]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[shadowsocks]]></title>
+    <url>%2F2017%2F01%2F19%2Fshadowsocks%2F</url>
+    <content type="text"><![CDATA[https://github.com/yixiaojichunqiu/file45.124.66.94216.189.151.95 10000]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[环境]]></title>
+    <url>%2F2016%2F12%2F25%2F20161225%E7%8E%AF%E5%A2%83%E5%85%B3%E7%B3%BB%2F</url>
+    <content type="text"><![CDATA[可以使用rvm来更新管理ruby。安装rvm $ curl -L http://get.rvm.io | bash -s stablervmruby 环境 RubyGems ——- mac自带 xcode安装好后rvm install 2.3.0 用rvm升级ruby CocoaPodssudo gem install cocoapods https://brew.sh/HomeBrew 自带python2 brew python3git https://github.com/creationix/nvmnvm 介绍Node Version Manager 管理node版本https://www.cnblogs.com/kongxianghai/p/5660101.html Node.js npm yarn Hexo mac显示隐藏文件https://blog.csdn.net/qq_34594236/article/details/79818582]]></content>
   </entry>
   <entry>
     <title><![CDATA[新建文章]]></title>

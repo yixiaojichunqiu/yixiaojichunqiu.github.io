@@ -1348,7 +1348,7 @@
         
           
             <p>cd ~/<br>cd /<br>cd ..</p>
-<p>cp - i exam1.c /usr/wang/shiyan1.c<br>　　该命令将文件exam1.c拷贝到/usr/wang 这个目录下，并改名为 shiyan1.c。若不希望重新命名，可以使用下面的命令：<br>　　cp exam1.c /usr/ wang/<br>　　cp - r /usr/xu/ /usr/liu/ 将/usr/xu目录中的所有文件及其子目录拷贝到目录/usr/liu中。<br>　　<br>　　例1：将/usr/xu中的所有文件移到当前目录（用“.”表示）中：<br>　　$ mv /usr/xu/ <em> .<br>　　例2：将文件wch.txt重命名为wjz.doc<br>　　$ mv wch.txt wjz.doc<br>　　<br>　　rm命令<br>　　- r 指示rm将参数中列出的全部目录和子目录均递归地删除。<br>　　- i 进行交互式删除<br>　　<br>　　tar -zxvf  Python-3.5.3.tar.xz<br>　　<br>　　mkdir mytemp<br>　　<br>　　vi a.txt<br>　　<br>　　find / -name ‘nginx-1.7.3.tar.gz’<br>　　<br>　　cat /etc/issue<br>　　cut -d : -f 1 /etc/passwd<br>　　<br>　　cat /etc/passwd 可以查看所有用户的列表<br>　　passwd 用户名<br>　　输入新密码，再确认一遍<br>　　<br>　　lsof -i :8081<br>　　kill -9 30121<br>　　<br>　　find / -size +100M<br>　　<br>　　rm -rf /var/log/</em><br>　　<br>　　df -lh<br>　　<br>　　man 
+<p>cp - i exam1.c /usr/wang/shiyan1.c<br>　　该命令将文件exam1.c拷贝到/usr/wang 这个目录下，并改名为 shiyan1.c。若不希望重新命名，可以使用下面的命令：<br>　　cp exam1.c /usr/ wang/<br>　　cp - r /usr/xu/ /usr/liu/ 将/usr/xu目录中的所有文件及其子目录拷贝到目录/usr/liu中。<br>　　<br>　　例1：将/usr/xu中的所有文件移到当前目录（用“.”表示）中：<br>　　$ mv /usr/xu/ <em> .<br>　　例2：将文件wch.txt重命名为wjz.doc<br>　　$ mv wch.txt wjz.doc<br>　　<br>　　rm命令<br>　　- r 指示rm将参数中列出的全部目录和子目录均递归地删除。<br>　　- i 进行交互式删除<br>　　<br>　　tar -zxvf  Python-3.5.3.tar.xz<br>　　<br>　　mkdir mytemp<br>　　<br>　　vi a.txt<br>　　<br>　　find / -name ‘nginx-1.7.3.tar.gz’<br>　　<br>　　cat /etc/issue<br>　　cut -d : -f 1 /etc/passwd<br>　　<br>　　cat /etc/passwd 可以查看所有用户的列表<br>　　passwd 用户名<br>　　输入新密码，再确认一遍<br>　　<br>　　lsof -i :8081<br>　　kill -9 30121<br>　　<br>　　find / -size +100M<br>　　<br>　　rm -rf /var/log/</em><br>　　<br>　　df -lh<br>　　<br>　　man<br>　　<br>　　cat /proc/version （Linux查看当前操作系统版本信息）<br>　　cat /etc/issue  或cat /etc/redhat-release（Linux查看版本当前操作系统发行版信息）<br>　　cat /proc/cpuinfo （Linux查看cpu相关信息，包括型号、主频、内核信息等）<br>　　<br>　　whereis ssserver
 　　
 　　
 　　
@@ -1392,7 +1392,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/26/新建文章/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/09/ssh/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Feng Dongkai">
@@ -1417,8 +1417,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/05/26/新建文章/" itemprop="url">
-                  新建文章
+                <a class="post-title-link" href="/2017/02/09/ssh/" itemprop="url">
+                  ssh
                 </a>
               
             
@@ -1434,8 +1434,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-05-26T22:21:00+08:00">
-                2016-05-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-09T12:52:01+08:00">
+                2017-02-09
               </time>
             
 
@@ -1472,10 +1472,9 @@
       
         
           
-            <p>hexo基本操作<br>cd /Users/yixiaojichunqiu/yixiaojichunqiu.io<br>hexo new 文章.md<br>open .<br>source文件夹 _posts文件夹 看到 文章.md</p>
-<h2 id="标题大小-用-号"><a href="#标题大小-用-号" class="headerlink" title="标题大小 用#号"></a>标题大小 用#号</h2><p><code>代码</code> 用```<br>链接用 <a href="http://yixiaojichunqiu.com" target="_blank" rel="external">链接</a> [文字]后加(链接)</p>
-<p>测试<br>hexo s<br><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
-<p>发布<br>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
+            <p>ls -al ~/.ssh<br>ssh-keygen -t rsa -C “yixiaojichunqiu@gmail.com”</p>
+<p>多对<br><a href="https://www.jianshu.com/p/65303f8e5f10" target="_blank" rel="external">https://www.jianshu.com/p/65303f8e5f10</a></p>
+<p>ssh-add /Users/yixiaojichunqiu/.ssh/id_rsa<br>ssh-add ~/.ssh/id_rsa</p>
 
           
         
@@ -1552,7 +1551,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
