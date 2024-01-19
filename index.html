@@ -264,7 +264,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/03/%E5%A9%9A%E7%A4%BC%E4%BA%8B%E5%AE%9C%E5%AE%89%E6%8E%92/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/19/!%E6%96%87%E6%A1%A3_2/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="">
@@ -289,8 +289,8 @@
             
               
                 
-                <a class="post-title-link" href="/2023/10/03/%E5%A9%9A%E7%A4%BC%E4%BA%8B%E5%AE%9C%E5%AE%89%E6%8E%92/" itemprop="url">
-                  婚礼事宜安排
+                <a class="post-title-link" href="/2024/01/19/!%E6%96%87%E6%A1%A3_2/" itemprop="url">
+                  学习
                 </a>
               
             
@@ -306,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-10-03T05:00:00+08:00">
-                2023-10-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-01-19T10:52:01+08:00">
+                2024-01-19
               </time>
             
 
@@ -344,7 +344,23 @@
       
         
           
-            <h2 id="冯东凯、邸亚飞-婚礼事宜安排"><a href="#冯东凯、邸亚飞-婚礼事宜安排" class="headerlink" title="冯东凯、邸亚飞 婚礼事宜安排"></a>冯东凯、邸亚飞 婚礼事宜安排</h2><h4 id="婚礼时间：公历2023年10月3日-星期二（农历八月十九）"><a href="#婚礼时间：公历2023年10月3日-星期二（农历八月十九）" class="headerlink" title="婚礼时间：公历2023年10月3日 星期二（农历八月十九）"></a>婚礼时间：公历2023年10月3日 星期二（农历八月十九）</h4><h4 id="婚礼流程"><a href="#婚礼流程" class="headerlink" title="婚礼流程:"></a>婚礼流程:</h4><p>4:50 人员准备就绪<br>5:00迎亲车队出发<br>5:20开始接亲<br>6:28上轿<br>6:58下轿<br>9:28出发去饭店<br>11:58典礼开始<br>典礼结束，开席</p>
+            <p><a target="_blank" rel="noopener" href="https://xiaozhuanlan.com/topic/1278405369">iOS 上修改私有方法的几种方式解析</a><br>通过创建 Category 复写，这种方式简单而粗暴，在面试中往往会被遗忘，但它有什么明显的副作用，而且为什么在 Category 中复写就能覆盖原方法实现，也很值得深究；<br>通过 void method_exchangeImplementations(Method m1, Method m2) 等类似方式实现 Method Swizzling，可能由于 mattt 的强大社区影响力这种方式现在已经“烂大街”了，绝大多数开发者都会多少有所了解，但这种“烂大街”的写法是为什么这么写的，仍然值得探讨；<br>通过第三方框架 Aspects 来修改私有方法，对于项目内有强 AOP 编程需求的很可能会选择这个方式，那么 Aspects 相对于普通的 Method Swizzling 有什么区别，它又是怎么实现交换后的还原呢，这点也想和大家分享；<br>Fishhook 这种方式本不该拿到这里来讨论，相对于前面三种方式都是针对 OC 这个语言的动态性来做文章的，Fishhook 则是对 C 语言方法进行了 Hook，它在逆向技术中占据了很大的作用。OC 的消息转发机制是依赖于 C 函数 objc_msgSend ，那么在一些特殊需求需要直接 Hook C 函数的话，Fishhook 就会派上用场了，这里也会对 Fishhook 如何实现 Hook C 语言方法作一些简介；</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/LeoMobileDeveloper/Blogs/blob/master/iOS/%E6%B6%88%E6%81%AF%E8%BD%AC%E5%8F%91%E6%9C%BA%E5%88%B6%E4%B8%8EAspects%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90.md">消息转发机制与Aspects源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6857699952563978247">一文读懂fishhook原理</a><br><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/dcQrR4knN0aGDPy2hsrgmg">图解 fishhook 原理</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/LeoMobileDeveloper/Blogs/blob/master/iOS/Behind%20fishhook.md">Fishhook</a><br>在__DATA Segment上创建一个指针，等到启动的时候，dyld动态的去做绑定（bind）<br>核心原理，finshhook就是通过rebind_symbols修改__DATASegment上的符号指针指向，来动态的hook C函数。<br>__DATA段中，有两个Sections和动态符号绑定有关：</p>
+<p>__nl_symbol_ptr 存储了non-lazily绑定的符号，这些符号在mach-o加载的时候绑定。<br>__la_symbol_ptr 存储了lazy绑定的符号（方法），这些方法在第一调用的时候，由dyld_stub_binder来绑定，所以你会看到，每个mach-o的non-lazily绑定符号都有dyld_stub_binder。</p>
+<p>具体的Hook过程<br>1 遍历Load Command，找到__LINKEDIT段，stab symbol table和symbol<br>2 找到symbol和string table的base地址<br>3 获取indriect table的数据(uint32_t类型的数组)</p>
+<p>4 再一次遍历laod command,这一次遍历__DATA段中的Sections,对S_LAZY_SYMBOL_POINTERS和S_NON_LAZY_SYMBOL_POINTERS段中的指针进行rebin，调用函数perform_rebinding_with_section</p>
+<p>5perform_rebinding_with_section，进行section中的symbol rebind。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/gdbinit/MachOView">MachOView</a></p>
+<p>MachOView 这个工具可以快速查看 Math-O 格式的文件，简单易用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://evilpan.com/2020/09/06/macho-inside-out/#mach-o-101">深入浅出MachO</a></p>
+<p><a target="_blank" rel="noopener" href="https://joey520.github.io/2020/01/30/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3MachO%E7%BB%93%E6%9E%84/">深入理解MachO结构与运行时系统</a></p>
+<p><a target="_blank" rel="noopener" href="https://tenloy.github.io/2021/10/18/compile-dynamic-link.html">Mach-O 文件的动态链接、库、Dyld(含dlopen)</a></p>
+<p><a target="_blank" rel="noopener" href="https://tenloy.github.io/2021/10/06/compile-macho.html">(二) Mach-O 文件结构</a><br>系列文章</p>
+<p><a href="">深入理解iOS App的启动过程</a></p>
 
           
         
@@ -426,13 +442,6 @@
           
 
           
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
 
         </nav>
 
@@ -468,7 +477,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
